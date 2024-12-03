@@ -43,7 +43,7 @@ tags:
 > **NO.**
 > Use the single channel depth images from `depth_gray/` folder in the Freiburg dataset.
 
-## Single Channel Depth Image
+## Single Channel Depth Image (Gray)
 
 ![Single channel depth](../assets/image-vs-depth_freiburg.png)
 
@@ -54,7 +54,7 @@ tags:
 	- **Max:** `255`
 - This is still *relative*, though.
 
-## Single Channel Gray Image
+## Single Channel Depth Image
 
 ![rgb-vs-depth-gray_freiburg](../assets/Pasted%20image%2020241203152607.png)
 

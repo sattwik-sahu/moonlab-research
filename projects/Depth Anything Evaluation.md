@@ -45,10 +45,21 @@ tags:
 
 ## Single Channel Depth Image
 
-![Single channel depth](image-vs-depth_freiburg.png)
+![Single channel depth](../assets/image-vs-depth_freiburg.png)
 
+- Picked the same image from `depth_gray`
 - Colormap applied is *Jet*.
 - Range of values:
 	- **Min:** `0`
 	- **Max:** `255`
 - This is still *relative*, though.
+
+## Single Channel Gray Image
+
+![rgb-vs-depth-gray_freiburg](../assets/Pasted%20image%2020241203152607.png)
+
+- Picked the same depth image from `depth_1ch`
+- Range of values:
+	- **Min:** `0`
+	- **Max:** `255`
+- This is still *relative*!.

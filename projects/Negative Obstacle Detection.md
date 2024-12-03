@@ -51,3 +51,10 @@ where,
 >   $$\underset{z \rightarrow 0^-}{\lim}\ p(z) \ne \underset{z \rightarrow 0^+}{\lim}\ p(z)$$
 >   where the difference between the LHS and RHS might not be negligible enough to avoid.
 > - **Conclusion:** Tune parameters carefully before deployment.
+
+
+> [!success] Results: Improved!
+> **MIoU:** `0.855`
+> 
+> - [ ] Choose images where negative obstacle detection works visually better than the normal method.
+> - [ ] Show some nice plots

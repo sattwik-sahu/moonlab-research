@@ -27,7 +27,7 @@ tags:
 - [x] Plot and see the scale of the values.
 	- [x] Min value?
 	- [x] Max value?
-- [ ] Init the *metric* depth estimation model and get the output.
+- [x] Init the *metric* depth estimation model and get the output.
 - [ ] **How to compare the output of metric model with the converted depth image from dataset?**
 
 ### Observation

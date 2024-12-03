@@ -24,25 +24,21 @@ tags:
 ## New Height Scoring Design
 
 These were the equations used in earlier design
-$$
-\begin{align}
+$$\begin{align}
 	\sigma(x) &= \frac{1}{1 + \exp(-x)} \tag{1.1} \\
 	p(z) &= \sigma(-\alpha \cdot (z - z_{\text{thresh}})) \tag{1.2} \\
-\end{align}
-$$
+\end{align}$$
 
 We use (1.1) and (1.2) to construct a new piecewise height scoring function as shown below
 
-$$
-\begin{align}
+$$\begin{align}
 	p^{+}(z) &= \sigma\left(-\alpha^{+} \cdot (z - z^{+}_{\text{thresh}})\right) \tag{2.1} \\
 	p^{-}(z) &= \sigma\left(\alpha^{-} \cdot (z + z^{-}_{\text{thresh}})\right) \tag{2.2} \\ \\
 	p(z) &= \begin{cases}
 		p^{+}(z),\; \text{if } z \ge 0 \\
 		p^{-}(z),\; \text{if } z \lt 0
 	\end{cases} \tag{2}
-\end{align}
-$$
+\end{align}$$
 where,
 - $\alpha^{+} \gt 0$ is the sharpness parameter for the cutoff for $z \ge 0$
 - $\alpha^{-} \gt 0$ is the sharpness parameter for the cutoff for $z \lt 0$

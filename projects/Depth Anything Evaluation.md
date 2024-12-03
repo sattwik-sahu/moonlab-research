@@ -78,4 +78,4 @@ tags:
 - Initialized the *Depth Anything v2 (Metric Outdoor Large)* model.
 - Ran inference on the same image again.
 
-![](../assets/image-vs-depth-anything-output.png)
+![Results](../assets/image-vs-depth-anything-output.png)

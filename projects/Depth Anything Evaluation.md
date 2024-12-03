@@ -63,3 +63,19 @@ tags:
 	- **Min:** `0`
 	- **Max:** `255`
 - This is still *relative*!.
+
+> [!help] What about NIR?
+> - NIR stands for Near Infra-Red imaging.
+> - It captures infrared light in the camera.
+> - It is used to differentiate between different surfaces which have different reflectivity to IR light.
+> 	- Water has very low reflectivity for IR; appears darker.
+> 	- Vegetation has very high reflectivity for IR; appears brighter.
+
+## RGB to RGB Comparison
+
+### Depth Estimation Model
+
+- Initialized the *Depth Anything v2 (Metric Outdoor Large)* model.
+- Ran inference on the same image again.
+
+![](../assets/image-vs-depth-anything-output.png)

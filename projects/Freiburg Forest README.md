@@ -58,23 +58,23 @@ The dataset contains multispectral and multimodal images. Each image corresponds
 
 Each of the **Training** and **Test** sets contains the following data:
 
-|**Folder Name**|**Description**|
-|---|---|
-|`rgb`|Standard RGB images|
-|`rgb_grayscale`|Grayscale version of the RGB images|
-|`depth_color`|3-channel colorized depth images (Anat Levin's colorization applied)|
-|`depth_color_1ch`|1-channel colorized depth images (Anat Levin's colorization applied)|
-|`depth_gray`|1-channel depth images|
-|`evi_color`|3-channel colorized Enhanced Vegetation Index (modified Jet colormap applied)|
-|`evi_gray`|1-channel Enhanced Vegetation Index images|
-|`ndvi_color`|3-channel colorized Normalized Difference Vegetation Index (modified Jet colormap applied)|
-|`ndvi_float`|Normalized Difference Vegetation Index images in floating-point|
-|`nir`|Images captured with a Wratten 25A filter (Near-Infrared in Blue channel, red light in Red channel)|
-|`nir_color`|3-channel colorized Near-Infrared images (modified Jet colormap applied)|
-|`nir_color_jet`|3-channel colorized Near-Infrared images (standard Jet colormap applied)|
-|`nir_gray`|1-channel Near-Infrared images|
-|`nrg`|3-channel NRG (Near-InfraRed, RED, GREEN) images|
-|`GT_color`|Ground truth masks for semantic segmentation (color representation for visualization)|
+| **Folder Name**   | **Description**                                                                                     |
+| ----------------- | --------------------------------------------------------------------------------------------------- |
+| `rgb`             | Standard RGB images                                                                                 |
+| `rgb_grayscale`   | Grayscale version of the RGB images                                                                 |
+| `depth_color`     | 3-channel colorized depth images (Anat Levin's colorization applied)                                |
+| `depth_color_1ch` | 1-channel colorized depth images (Anat Levin's colorization applied)                                |
+| `depth_gray`      | 1-channel depth images                                                                              |
+| `evi_color`       | 3-channel colorized Enhanced Vegetation Index (modified Jet colormap applied)                       |
+| `evi_gray`        | 1-channel Enhanced Vegetation Index images                                                          |
+| `ndvi_color`      | 3-channel colorized Normalized Difference Vegetation Index (modified Jet colormap applied)          |
+| `ndvi_float`      | Normalized Difference Vegetation Index images in floating-point                                     |
+| `nir`             | Images captured with a Wratten 25A filter (Near-Infrared in Blue channel, red light in Red channel) |
+| `nir_color`       | 3-channel colorized Near-Infrared images (modified Jet colormap applied)                            |
+| `nir_color_jet`   | 3-channel colorized Near-Infrared images (standard Jet colormap applied)                            |
+| `nir_gray`        | 1-channel Near-Infrared images                                                                      |
+| `nrg`             | 3-channel NRG (Near-InfraRed, RED, GREEN) images                                                    |
+| `GT_color`        | Ground truth masks for semantic segmentation (color representation for visualization)               |
 
 ---
 

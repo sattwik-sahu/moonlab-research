@@ -123,7 +123,7 @@ flowchart TB
 > 
 > Instead of mapping hand pose of human operator *(task-space mapping)*, direc *joint-space mapping* from smaller "leader" robot (WidowX) to larger "follower" robot (ViperX).
 > 
-> [Fine-Grained-Bimanual-Operation_Zhao, page 3](resources/Fine-Grained-Bimanual-Operation_Zhao.pdf#page=3&selection=160,0,170,32)
+> [Fine-Grained-Bimanual-Operation_Zhao, page 3](../resources/Fine-Grained-Bimanual-Operation_Zhao.pdf#page=3&selection=160,0,170,32)
 
 ### Benefits of Joint-Space Mapping
 

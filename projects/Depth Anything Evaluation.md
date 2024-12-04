@@ -43,6 +43,8 @@ tags:
 > **NO.**
 > Use the single channel depth images from `depth_gray/` folder in the Freiburg dataset.
 
+> Need to use depth images from different folders specified in [Freiburg Forest README](Freiburg%20Forest%20README.md)
+
 ## Single Channel Depth Image (Gray)
 
 ![Single channel depth](../assets/image-vs-depth_freiburg.png)

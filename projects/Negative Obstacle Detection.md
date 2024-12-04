@@ -52,9 +52,35 @@ where,
 >   where the difference between the LHS and RHS might not be negligible enough to avoid.
 > - **Conclusion:** Tune parameters carefully before deployment.
 
-
 > [!success] Results: Improved!
 > **MIoU:** `0.855`
 > 
 > - [ ] Choose images where negative obstacle detection works visually better than the normal method.
 > - [ ] Show some nice plots
+
+![](../assets/typing-test-001.png)
+
+# Nursery Dataset
+
+- [ ] Find image with negative obstacle in the forest nursery dataset.
+- [ ] Run the pipeline on it with and without negative.
+- [ ] Compare results, create nice plots. 😄
+
+> Remember to load [FLIR camera params](FLIR%20Camera%20Parameters.md)
+
+> [!todo]
+> ### Experiments
+> 
+> - [ ] Collect data for **negative obstacles** from nursery
+> - [ ] Create synthetic negative obstacles (?)
+> - [ ] Look for craters in the campus
+
+---
+
+> [!important] Statistical Evidence
+> - Need more statistical evidence on related as well as related data for negative obstacle detection.
+> - Perform more [experiments](AnyTraverse%20Experiment%20Design.md) (15-20? 🤔) on indoor, outdoor, and offroad envs.
+
+> **General:**
+> 1. Solve module for specific case first, then try to generalize.
+> 2. Make all modules easy to analyze. Each intermediate step should be visible/accessible.

@@ -1,8 +1,8 @@
 ---
 tags:
-  - anytraverse
-  - dataset
-  - experiments
+  - projects/anytraverse
+  - resources/dataset
+  - resources/experiments
 ---
 # 📍 Locations
 

@@ -1,7 +1,7 @@
 ---
 tags:
-  - dataset
-  - offroad
+  - resources/dataset
+  - area/offroad
 ---
 # Authors
 

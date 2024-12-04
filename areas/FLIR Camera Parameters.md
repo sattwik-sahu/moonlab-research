@@ -1,6 +1,6 @@
 ---
 tags:
-  - anytraverse
+  - resources/components
 ---
 # Camera Information
 

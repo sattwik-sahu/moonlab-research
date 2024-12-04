@@ -1,7 +1,7 @@
 ---
 tags:
-  - anytraverse
-  - implementation
+  - projects/anytraverse
+  - resources/implementation
 ---
 # Why detect negative obstacles?
 

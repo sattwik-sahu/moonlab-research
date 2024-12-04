@@ -1,6 +1,6 @@
 ---
 tags:
-  - anytraverse
+  - projects/anytraverse
 ---
 # Analysis of Freiburg Forest Data
 

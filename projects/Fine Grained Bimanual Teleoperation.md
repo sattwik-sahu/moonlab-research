@@ -1,7 +1,8 @@
 ---
 tags:
-  - dlrl
-  - reading
+  - projects/dl-rl
+  - resources/reading
+  - area/humanoid
 ---
 > [!quote] Abstract
 > *Fine manipulation* tasks, such as threading cable ties or slotting a battery, are notoriously difficult for robots because they require *precision*, *careful coordination of contact forces*, and closed-*loop visual feedback*. Performing these tasks typically requires high-end robots, accurate sensors, or careful calibration, which can be expensive and difficult to set up. Can learning enable low-cost and imprecise hardware to perform these fine manipulation tasks? We present a low-cost system that performs end-to-end imitation learning directly from real demonstrations, collected with a custom teleoperation interface. Imitation learning, however, presents its own challenges, particularly in high- precision domains: errors in the policy can compound over time, and human demonstrations can be non-stationary. To address these challenges, we develop a simple yet novel algorithm, **Action Chunking with Transformers (ACT)**, which ==learns a generative model over action sequences==. ACT allows the robot to learn 6 difficult tasks in the real world, such as opening a translucent condiment cup and slotting a battery with 80-90% success, with only 10 minutes worth of demonstrations. [Project Website](https://tonyzhaozh.github.io/aloha/)
@@ -115,3 +116,24 @@ flowchart TB
 > 5. Easy-to-Build
 > 
 > [Fine-Grained-Bimanual-Operation_Zhao, page 3](resources/Fine-Grained-Bimanual-Operation_Zhao.pdf#page=3&selection=88,6,137,29)
+
+## Joint-Space Mapping instead of Task-Space
+
+> [!tldr] TLDR;
+> 
+> Instead of mapping hand pose of human operator *(task-space mapping)*, direc *joint-space mapping* from smaller "leader" robot (WidowX) to larger "follower" robot (ViperX).
+> 
+> [Fine-Grained-Bimanual-Operation_Zhao, page 3](resources/Fine-Grained-Bimanual-Operation_Zhao.pdf#page=3&selection=160,0,170,32)
+
+### Benefits of Joint-Space Mapping
+
+1. Fine manipulation requires operating the [robot near singularities](../resources/Robot%20Singularities.md).
+	- Off the shelf *inverse kinematics (IK)* often fails in this setting.
+	- Joint-Space Mapping :luc_arrow_right: high bandwidth control, less computation.
+2. Weight of the leader robot prevents the operator from moving too fast, dampens vibrations.
+
+---
+
+# Action Chunking with Transformers
+
+**TODO:** Complete this section

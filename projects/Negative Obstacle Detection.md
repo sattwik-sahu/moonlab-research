@@ -1,6 +1,7 @@
 ---
 tags:
   - anytraverse
+  - implementation
 ---
 # Why detect negative obstacles?
 
@@ -66,7 +67,7 @@ where,
 - [ ] Run the pipeline on it with and without negative.
 - [ ] Compare results, create nice plots. 😄
 
-> Remember to load [FLIR camera params](FLIR%20Camera%20Parameters.md)
+> Remember to load [FLIR camera params](../areas/FLIR%20Camera%20Parameters.md)
 
 > [!todo]
 > ### Experiments

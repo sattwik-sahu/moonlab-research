@@ -2,6 +2,7 @@
 tags:
   - anytraverse
   - dataset
+  - experiments
 ---
 # 📍 Locations
 
@@ -32,3 +33,10 @@ tags:
 	- Stairs
 	- Potholes
 	- Off footpath
+
+### Evaluating Results
+
+- Can evaluate with better depth estimation using [Intel RealSense D435i RGB-D Camera](https://robu.in/product/intel-realsense-depth-camera-d435i/)
+- Create custom **ground truths** for AnyTraverse.
+	- Current GTs only for semantic segmentation, contain no information about actual traversibility of the region.
+	- Need *information about traversibility* of regions in the image.

@@ -83,4 +83,35 @@ flowchart TB
 	- Also takes care of *temporally corellated confounders* (unknown variables) such as pauses in human demonstrations.
 - **Temporal Ensembling:**
 	- Queries the policy more frequently.
-	- averages across overlapping action chunks.
+	- Averages across overlapping action chunks.
+- Action chunking is implemented with **transformers**.
+	- Transformers designed for *sequence modelling*.
+	- Trained as *conditional variational auto-encoder (CVAE)* to capture variability in human data.
+- The method named ==Action Chunking with Transformers (ACT)==.
+
+## Key Contributions
+
+- Low cost system for learning fine manipulations, comprising:
+	- **Teleop** system
+		- Low cost
+		- High precision
+		- Rich contact tasks - Tasks which require lots of *contact* with the object
+	- Novel **imitation learning** algorithm
+- Method employed to learn 6 tasks
+- Achieves 80-90% success with only 10 min or 50 demonstration trajectories from human.
+
+---
+
+# ALOHA
+
+> [!info] ALOHA
+> **A Low-Cost Open-Source Hardware System** for Bimanual Teleoperation
+> 
+> ### Principles:
+> 1. Low-Cost
+> 2. Versatile
+> 3. User-Friendly
+> 4. Repairable
+> 5. Easy-to-Build
+> 
+> [Fine-Grained-Bimanual-Operation_Zhao, page 3](resources/Fine-Grained-Bimanual-Operation_Zhao.pdf#page=3&selection=88,6,137,29)

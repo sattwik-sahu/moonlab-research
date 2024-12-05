@@ -136,4 +136,57 @@ flowchart TB
 
 # Action Chunking with Transformers
 
-**TODO:** Complete this section
+## Training of ACT
+
+- Collect human demonstration data using [ALOHA](#ALOHA).
+- Actions = *Joint positions of leader robot*.
+- Observation
+	- Current *joint positions of follower robot*.
+	- *RGB image* feed from 4 cameras.
+- ACT is trained to **predict the sequence of future actions**, given the current observations (Markov assumed).
+- Sequence of *future actions* :luc_arrow_right: **Target joint positions of follower robot**. Joint positions here, are considered for both arms of the follower.
+- Intuitively, the ACT tries to *imitate* what a human operator would do, in **$k$ future time steps**, given the current observations.
+
+## Action Chunking and Temporal Ensemble
+
+
+
+> [!info] Action Chunking
+> Inspired from the concepts of neuroscience, action chunking refers to the process of grouping individual actions into chunks and then executing those chunks as units.
+> 
+> ```mermaid
+> flowchart TD
+>   A[Complex Action] --> a1 & a2 & a3 & a4 & a5 & a6 & a7
+>   a1 & a2 & a3 -..-> c1[[Chunk 1]] 	
+>   a4 & a5 -..-> c2[[Chunk 2]] 	
+>   a6 & a7 -..-> c3[[Chunk 3]]
+>   subgraph Execution
+> 	  direction LR
+> 	  start((Start)) ==> c1 ==> c2 ==> c3 ==> done((Done)) 	
+>   end
+> ```
+
+
+- To combat the challenge of **compounding errors** in *pixel to action* imitation learning, need to *reduce the effective horizon of long trajectories*.
+- **Chunk size** fixed to be $k$.
+	- Every $k$ steps, the *agent receives an observation*.
+	- Then the agent *generates the next $k$ actions*, then executes them in sequence.
+- This results in a $k$-fold reduction in the effective horizon for the task.
+
+> The policy models $\pi_{\theta}(a_{t:t + k} \mid s_t)$, not just $\pi_{\theta}(a_{t} \mid s_t)$
+
+- Chunking can also help model **Non-Markovian behaviours** in human demos, e.g., *Pauses* in the middle of the demo.
+
+### Stabilization of Actions with Temporal Ensemble
+
+![](../assets/act__action-chunking-temporal-ensemble.png) ^647afb
+
+> [!help] Why Stabilization?
+> - Naive implementation of ACT is *sub-optimal*.
+> - New env every $k$ steps :luc_arrow_right: **jerky robot motion**.
+> - Due to discrete switching between execution and observation.
+> - Need to make it **smooth**.
+
+- To avoid discrete switching, $\pi_{\theta}(a_{t:t + 1} \mid s_t)$ queried at every $s_t$.
+- This makes **different action chunks overlap**.
+- At a given time step, there will be *more than one predicted action*. See [Figure](#^647afb)

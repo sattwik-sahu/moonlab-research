@@ -16,6 +16,8 @@ tags:
 
 # Variational?
 
+![Variational Autoencoder](../assets/vae.png)
+
 - Machine that learns the parameters of the distribution of the input space.
 - Output of encoder is the mean $\mu$ and standard deviation $\sigma$ of the input distribution.
 - *Catches the "variation" in the data*.

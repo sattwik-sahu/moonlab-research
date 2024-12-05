@@ -58,7 +58,7 @@ tags:
 
 ## Single Channel Depth Image
 
-![rgb-vs-depth-gray_freiburg](../assets/Pasted%20image%2020241203152607.png)
+![rgb-vs-depth-gray_freiburg](../assets/image-vs-depth-image-freiburg.png)
 
 - Picked the same depth image from `depth_1ch`
 - Range of values:

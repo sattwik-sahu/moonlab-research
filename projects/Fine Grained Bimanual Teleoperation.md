@@ -187,6 +187,12 @@ flowchart TB
 > - Due to discrete switching between execution and observation.
 > - Need to make it **smooth**.
 
-- To avoid discrete switching, $\pi_{\theta}(a_{t:t + 1} \mid s_t)$ queried at every $s_t$.
+- To avoid discrete switching, $\pi_{\theta}(a_{t:t + k} \mid s_t)$ queried at every $s_t$.
 - This makes **different action chunks overlap**.
-- At a given time step, there will be *more than one predicted action*. See [Figure](#^647afb)
+- At a given time step, there will be *more than one predicted action*. See [Figure](#^647afb).
+- Action to be executed $a_t$ computed from the different actions by exponentially weighted summation.
+  $$w_i = \exp(-m \cdot i)$$
+  $$a_t = \sum_{i = 0}^{\min(t, k)}{w_i \cdot a^{(i)}_t}$$
+  where
+  - $w_0$ is the oldest action
+  - $m$ governs the speed at which new observations are incorporated. Smaller $m$ means faster incorporation.
